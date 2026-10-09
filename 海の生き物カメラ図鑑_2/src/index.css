@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Scan laser beam keyframes */
+  @keyframes scan {
+    0% { top: 0%; }
+    50% { top: 100%; }
+    100% { top: 0%; }
+  }
+
+  /* Fade out capture flash keyframes */
+  @keyframes flash {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  .animate-scan-beam {
+    animation: scan 2s infinite linear;
+  }
+
+  .animate-fade-out {
+    animation: flash 0.4s forwards ease-out;
+  }
+}
+
+/* Ensure nice big Ruby text for furigana */
+ruby {
+  ruby-position: over;
+  margin: 0 1px;
+}
+
+rt {
+  font-size: 0.55em;
+  color: #0284C7;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  padding-bottom: 0.1em;
+}
+
+/* Print utility to force horizontal layout */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  header, footer, nav, button, .print\:hidden {
+    display: none !important;
+  }
+  #card-printer {
+    background: white !important;
+    padding: 0 !important;
+  }
+}
+

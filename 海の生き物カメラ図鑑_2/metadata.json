@@ -1,0 +1,6 @@
+{
+  "name": "海の生き物カメラ図鑑",
+  "description": "魚のカードをスキャンして、海の生き物の「食べる・食べられる・助け合う」などの生物間相互作用を楽しく学ぶ幼児向け学習カメラ図鑑です。",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
